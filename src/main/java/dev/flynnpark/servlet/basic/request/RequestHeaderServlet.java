@@ -1,4 +1,4 @@
-package dev.flynnpark.servlet.basic;
+package dev.flynnpark.servlet.basic.request;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
