@@ -1,4 +1,4 @@
-package dev.flynnpark.servlet.servlet;
+package dev.flynnpark.servlet.web.servlet;
 
 import dev.flynnpark.servlet.domain.member.Member;
 import dev.flynnpark.servlet.domain.member.MemberRepository;
