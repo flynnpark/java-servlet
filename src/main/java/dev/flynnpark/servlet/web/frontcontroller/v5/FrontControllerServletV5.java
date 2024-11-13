@@ -6,6 +6,7 @@ import dev.flynnpark.servlet.web.frontcontroller.v3.controller.MemberFormControl
 import dev.flynnpark.servlet.web.frontcontroller.v3.controller.MemberListControllerV3;
 import dev.flynnpark.servlet.web.frontcontroller.v3.controller.MemberSaveControllerV3;
 import dev.flynnpark.servlet.web.frontcontroller.v5.adapter.ControllerV3HandlerAdapter;
+import dev.flynnpark.servlet.web.frontcontroller.v5.adapter.ControllerV4HandlerAdapter;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -34,10 +35,15 @@ public class FrontControllerServletV5 extends HttpServlet {
                 "/front-controller/v5/v3/members/new-form", new MemberFormControllerV3());
         handlerMappingMap.put("/front-controller/v5/v3/members/save", new MemberSaveControllerV3());
         handlerMappingMap.put("/front-controller/v5/v3/members", new MemberListControllerV3());
+        handlerMappingMap.put(
+                "/front-controller/v5/v4/members/new-form", new MemberFormControllerV3());
+        handlerMappingMap.put("/front-controller/v5/v4/members/save", new MemberSaveControllerV3());
+        handlerMappingMap.put("/front-controller/v5/v4/members", new MemberListControllerV3());
     }
 
     private void initHandlerAdapters() {
         handlerAdapters.add(new ControllerV3HandlerAdapter());
+        handlerAdapters.add(new ControllerV4HandlerAdapter());
     }
 
     @Override
